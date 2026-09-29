@@ -1,18 +1,13 @@
-# COVID-19 Data Automation in Python
+# Public Health Data Automation in Python
 
-A portfolio placeholder for a Python-based COVID-19 data automation workflow.
+This repository now includes a completed [CDC PLACES data quality and reporting pipeline](places-nc-data-quality/README.md). It retrieves a real CDC dataset, checks North Carolina county records, logs exceptions, and creates reproducible report outputs. The included source snapshot yielded 100 valid county rows and no flagged issues on the recorded run.
 
-## Current status
-This repository currently contains documentation only; no executable automation script or dataset is committed. For that reason, it should not be presented as a completed automation implementation.
+The separate COVID-19 automation workflow described earlier remains planned. This PLACES project analyzes modeled diabetes and obesity prevalence; it is not a COVID-19 dataset. For completed COVID-19 analysis, see [Covid-19-Analysis](https://github.com/OugoMartin/Covid-19-Analysis).
 
-## Intended scope
-A complete version could automate data ingestion, validation, cleaning, KPI calculation, output generation, and scheduled reporting while documenting the source and date range of the public-health data.
+## Run the completed pipeline
 
-## Related project
-The separate `Covid-19-Analysis` repository contains Python analysis scripts, a notebook, cleaned data, model/report outputs, and visualizations. That repository currently provides the stronger evidence of completed COVID-19 analytical work.
+    cd places-nc-data-quality
+    python pipeline.py --out outputs
+    python -m unittest discover -s tests -v
 
-## Next steps
-Add the actual automation source code, dependency file, sample or source-data instructions, validation rules, generated outputs, and reproducible run instructions.
-
-## Author
-Martin Ngare
+See the [project README](places-nc-data-quality/README.md) for source, quality rules, outputs, and interpretation limits.
